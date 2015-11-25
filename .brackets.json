@@ -1,0 +1,13 @@
+{
+    "path": {
+        "css/style.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "sourceComments": false,
+                "outputStyle": "compressed",
+                "sourceMap": false
+            },
+            "fonts.fontSize": "10px"
+        }
+    }
+}
