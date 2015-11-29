@@ -13,6 +13,10 @@ $(function() {
 });
 
 
+
+
+
+
 // pull to refresh function
 var switchHouseStatus = function() {
   return new Promise(function(resolve, reject) {
@@ -24,13 +28,12 @@ var switchHouseStatus = function() {
     }
   });
 };
-
-// switch status
 var hungry = false;
 function switchStatus() {
   if (hungry) {
     hungry = false;
-    setToFed(getFeedTime());
+    var time = moment().format('h:mm a');
+    setToFed(time);
     changeFeedTime();
   }
   else {
@@ -71,27 +74,11 @@ function changeStatus(status) {
     }
   });
 }
-
-
-
-
-
-
-// feeding time functions
-function getFeedTime() {
-  var jqXHR = $.ajax({
-    type: 'POST',
-    url: 'php/check-time.php',
-    async: false
-  });
-  return jqXHR.responseText;
-}
 function changeFeedTime() {
   $.ajax({
     type: 'POST',
     url: 'php/change-time.php',
     cache: false,
-    data: {status:status},
     success: function(result) {
       console.log(result);
     }

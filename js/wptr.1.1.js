@@ -128,9 +128,21 @@ var WebPullToRefresh = (function () {
 	 * Set the CSS transform on the content element to move it on the screen.
 	 */
 	var _setContentPan = function() {
+   
+   
+//   var offset = $("#animal").offset().top;
+//   console.log(offset);
+//   
+//   $("#animal").css('width', 230 + pan.distance );
+   
+   
+   
+   
 		// Use transforms to smoothly animate elements on desktop and mobile devices
 		options.contentEl.style.transform = options.contentEl.style.webkitTransform = 'translate3d( 0, ' + pan.distance + 'px, 0 )';
+   
 		options.ptrEl.style.transform = options.ptrEl.style.webkitTransform = 'translate3d( 0, ' + ( pan.distance - options.ptrEl.offsetHeight ) + 'px, 0 )';
+   
 	};
 
 	/**

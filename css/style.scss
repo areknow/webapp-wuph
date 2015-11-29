@@ -55,7 +55,7 @@ body {
   color: white;
   
   .wrapper {
-    pointer-events: none;
+//    pointer-events: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -78,6 +78,13 @@ body {
     .status {
       position: absolute;
       bottom: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+    .walked {
+      position: absolute;
+      bottom: -50px;
       display: block;
       text-align: center;
       width: 100%;

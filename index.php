@@ -39,6 +39,7 @@
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/hammer.2.0.4.js"></script>
   <script src="js/wptr.1.1.js"></script>
+  <script src="js/moment.js"></script>
   <script src="js/pace.js"></script>
   <script src="js/home.js"></script>
 </html>
